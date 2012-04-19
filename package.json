@@ -1,0 +1,36 @@
+{
+  "name": "node-asset-builder",
+  "preferGlobal": false,
+  "version": "0.0.6",
+  "author": "rui yang <rui.yang@gmail.com>",
+  "description": "generate json hash for image files and css files",
+  "contributors": [
+    "Rui Yang"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ruiyang2012/node-asset-builder.git"
+  },
+  "dependencies": {
+    "underscore": "1.3.2",
+    "gm": "1.2.0",
+    "findit": "0.1.2",
+    "mocha": "1.0.1",
+    "expect.js": "0.1.2",
+    "nib": "0.4.0",
+    "stylus": "0.25.0",
+    "mkdirp": "0.3.1"
+  },
+  "noAnalyze": true,
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6.8"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "main": "./index"
+}

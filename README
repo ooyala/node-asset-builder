@@ -1,0 +1,31 @@
+This package depends on GraphicsMagick, need to install first.
+On Mac: sudo brew install GraphicsMagick
+or build from here: http://www.graphicsmagick.org/
+
+npm install node-asset-builder
+
+usage:
+
+var NodeAssetBuilder = require("node-asset-builder");
+
+var nab = new NodeAssetBuilder({
+    imageFolder: '<path to the image>',  // default to ./assets
+    cssFolder: '<path to the css files>', // default to ./stylus
+    tempFolder: '<path to temp>', // default to ./temp
+    contextName: 'context of the hash', // default to OO
+    cssHashName: 'object Name for storing minified css in the json object', // default to stylus_css
+    imgHashName: 'object name for storing datauri of the images in the json object', // default to asset_list
+    outputPath: 'output path for the js file contains css json and datauri json object', // default to src/autogen
+    cssContainerSelector: 'css selector for the root element. can be a class or object name.', // default to #<%= elementId %>
+    __end_marker: 1
+  });
+
+nab.genImageDataUriHash(); // output js file contains image datauri hash for each image file.
+nab.genMinifiedCssHash();
+
+var base64EncodeContent = nab.fileContentToBase64('file to encode to base 64', 'data uri prefix');
+// will read a file's content, and convert it to base64.
+// nab.fileContentToBase64("foo.png", "data:image/png;base64,"), will return the datauri string for png file
+
+// return inline minfied css from a full css string.
+var minfiedCss = nab.getMinifiedCssString("#foo { width: 5px; } \n #foo, b { color: black; }", "key")
