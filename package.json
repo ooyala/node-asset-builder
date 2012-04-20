@@ -2,10 +2,13 @@
   "name": "node-asset-builder",
   "preferGlobal": false,
   "version": "0.0.7",
-  "author": "rui yang <rui.yang@gmail.com>",
+  "author": "Ooyala <x-device-team@ooyala.com>",
   "description": "generate json hash for image files and css files",
   "contributors": [
-    "Rui Yang"
+    {
+      "name": "Rui Yang",
+      "email": "rui@ooyala.com"
+    }
   ],
   "repository": {
     "type": "git",
